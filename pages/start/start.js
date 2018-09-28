@@ -14,9 +14,9 @@ Page({
   },
   onLoad:function(){
     var that = this
-    wx.setNavigationBarTitle({
-      title: wx.getStorageSync('mallName')
-    })
+    // wx.setNavigationBarTitle({
+    //   title: wx.getStorageSync('mallName')
+    // })
   },
   onShow:function(){
     let that = this
