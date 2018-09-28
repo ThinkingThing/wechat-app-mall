@@ -8,8 +8,8 @@ Page({
     score_sign_continuous:0
   },
 	onLoad() {
-    
-	},	
+
+	},
   onShow() {
     let that = this;
     let userInfo = wx.getStorageSync('userInfo')

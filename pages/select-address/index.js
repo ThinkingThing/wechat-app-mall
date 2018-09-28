@@ -26,17 +26,17 @@ Page({
       url:"/pages/address-add/index"
     })
   },
-  
+
   editAddess: function (e) {
     wx.navigateTo({
       url: "/pages/address-add/index?id=" + e.currentTarget.dataset.id
     })
   },
-  
+
   onLoad: function () {
     console.log('onLoad')
 
-   
+
   },
   onShow : function () {
     this.initShippingAddress();

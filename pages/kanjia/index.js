@@ -15,11 +15,11 @@ Page({
   //事件处理函数
   swiperchange: function(e) {
       //console.log(e.detail.current)
-       this.setData({  
-        swiperCurrent: e.detail.current  
-    })  
+       this.setData({
+        swiperCurrent: e.detail.current
+    })
   },
-  onLoad: function (e) {    
+  onLoad: function (e) {
     this.data.id = e.id;
     this.data.kjId = e.kjId;
     this.data.joiner = e.joiner;

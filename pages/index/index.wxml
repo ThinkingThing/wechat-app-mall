@@ -2,7 +2,7 @@
 <!--1px = 750/320 = 2.34rpx;-->
 <view class="container">
    <view class="swiper-container">
-        <swiper class="swiper_box" 
+        <swiper class="swiper_box"
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
             <block wx:for="{{banners}}" wx:key="id">
                 <swiper-item>
@@ -10,11 +10,11 @@
                 </swiper-item>
             </block>
         </swiper>
-        <view class="dots">  
-            <block wx:for="{{banners}}" wx:key="unique">  
-                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>  
-            </block>  
-        </view>  
+        <view class="dots">
+            <block wx:for="{{banners}}" wx:key="unique">
+                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
    </view>
     <view class="type-container">
         <scroll-view class="type-navbar" scroll-x="true">
@@ -64,7 +64,7 @@
            <view style='display:flex;'>
             <view class="goods-price">¥ {{item.minPrice}}</view>
             <view wx:if="{{item.originalPrice && item.originalPrice > 0}}" class="goods-price" style='color:#aaa;text-decoration:line-through'>¥ {{item.originalPrice}}</view>
-           </view>           
+           </view>
         </view>
     </view>
     <view hidden="{{loadingMoreHidden ? true : false}}" class="no-more-goods">没有更多啦</view>

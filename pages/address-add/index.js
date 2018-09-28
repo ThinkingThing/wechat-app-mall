@@ -101,7 +101,7 @@ Page({
       },
       success: function(res) {
         if (res.data.code != 0) {
-          // 登录错误 
+          // 登录错误
           wx.hideLoading();
           wx.showModal({
             title: '失败',
@@ -143,7 +143,7 @@ Page({
         districts:pinkArray
       });
     }
-    
+
   },
   bindPickerProvinceChange:function(event){
     var selIterm = commonCityData.cityData[event.detail.value];
@@ -231,7 +231,7 @@ Page({
     }
    },
   selectCity: function () {
-    
+
   },
   deleteAddress: function (e) {
     var that = this;
@@ -285,7 +285,7 @@ Page({
                 }
               }
             }
-            
+
           }
         }
 

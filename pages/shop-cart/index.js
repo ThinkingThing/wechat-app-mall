@@ -12,7 +12,7 @@ Page({
     },
     delBtnWidth:120,    //删除按钮宽度单位（rpx）
   },
- 
+
  //获取元素自适应后的实际宽度
   getEleWidth:function(w){
     var real = 0;
@@ -78,14 +78,14 @@ Page({
       }
       var list = this.data.goodsList.list;
       if(index!="" && index !=null){
-        list[parseInt(index)].left = left; 
+        list[parseInt(index)].left = left;
         this.setGoodsList(this.getSaveHide(),this.totalPrice(),this.allSelect(),this.noSelect(),list);
       }
     }
   },
 
   touchE:function(e){
-    var index = e.currentTarget.dataset.index;    
+    var index = e.currentTarget.dataset.index;
     if(e.changedTouches.length==1){
       var endX = e.changedTouches[0].clientX;
       var disX = this.data.startX - endX;
@@ -94,7 +94,7 @@ Page({
       var left = disX > delBtnWidth/2 ? "margin-left:-"+delBtnWidth+"px":"margin-left:0px";
       var list = this.data.goodsList.list;
      if(index!=="" && index != null){
-        list[parseInt(index)].left = left; 
+        list[parseInt(index)].left = left;
         this.setGoodsList(this.getSaveHide(),this.totalPrice(),this.allSelect(),this.noSelect(),list);
 
       }
@@ -110,7 +110,7 @@ Page({
     var index = e.currentTarget.dataset.index;
     var list = this.data.goodsList.list;
     if(index!=="" && index != null){
-        list[parseInt(index)].active = !list[parseInt(index)].active ; 
+        list[parseInt(index)].active = !list[parseInt(index)].active ;
         this.setGoodsList(this.getSaveHide(),this.totalPrice(),this.allSelect(),this.noSelect(),list);
       }
    },
@@ -195,7 +195,7 @@ Page({
             curItem.active = true;
         }
       }
-     
+
       this.setGoodsList(this.getSaveHide(),this.totalPrice(),!currentAllSelect,this.noSelect(),list);
    },
    jiaBtnTap:function(e){
@@ -379,7 +379,7 @@ Page({
             }
           })
         }
-        
+
       }
     },
     navigateToPayOrder:function () {

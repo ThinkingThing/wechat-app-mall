@@ -1,7 +1,7 @@
 <import src="../../wxParse/wxParse.wxml" />
-<view class="container"> 
+<view class="container">
    <view class="swiper-container" wx:if="{{!goodsDetail.basicInfo.videoId}}">
-        <swiper class="swiper_box" 
+        <swiper class="swiper_box"
                     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
             <block wx:for="{{goodsDetail.pics}}" wx:key="id">
                 <swiper-item>
@@ -9,11 +9,11 @@
                 </swiper-item>
             </block>
         </swiper>
-        <view class="dots">  
-            <block wx:for="{{goodsDetail.pics}}" wx:key="unique">  
-                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>  
-            </block>  
-        </view>  
+        <view class="dots">
+            <block wx:for="{{goodsDetail.pics}}" wx:key="unique">
+                <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
    </view>
    <view class="swiper-container" wx:if="{{goodsDetail.basicInfo.videoId}}">
         <video src="{{videoMp4Src}}" autoplay="true" loop="true" style='width:100%'></video>
@@ -70,7 +70,7 @@
           </view>
         </view>
     </view>
-    <view class="footer-box">        
+    <view class="footer-box">
         <view class="contact">
           <contact-button style="opacity:0;position:absolute;" type="default-dark"  session-from="weapp" size="27"></contact-button>
           <view style='position:absolute;bottom:10rpx;'> 客服 </view>
@@ -99,14 +99,14 @@
              </view>
              <view class="size-label-box">
                 <block wx:for="{{goodsDetail.properties}}" wx:for-item="property" wx:for-index="idx" wx:key="id">
-                <view class="label">{{property.name}}</view> 
+                <view class="label">{{property.name}}</view>
                 <view class="label-item-box">
                     <view class="label-item {{item.active ? 'active' : '' }}" wx:for="{{property.childsCurGoods}}" wx:key="id" bindtap="labelItemTap" data-propertyindex="{{idx}}" data-propertyid="{{property.id}}" data-propertyname="{{property.name}}" data-propertychildindex="{{index}}" data-propertychildid="{{item.id}}" data-propertychildname="{{item.name}}">
                         {{item.name}}
-                    </view> 
+                    </view>
                 </view>
                 </block>
-             </view> 
+             </view>
              <view class="buy-num-box">
                 <view class="num-label">购买数量</view>
                 <view class="num-box">
@@ -116,13 +116,13 @@
                     </view>
                     <view class="num-jia {{buyNumber== buyNumMax ? 'hui': ''}}" bindtap="numJiaTap">+</view>
                 </view>
-             </view>  
+             </view>
              <view class="popup-join-btn" wx:if="{{shopType =='addShopCar'}}" bindtap="addShopCar">
                 加入购物车
              </view>
              <view class="popup-join-btn" data-shopType="{{shopType}}" wx:if="{{shopType =='tobuy' || shopType =='toPingtuan'}}" bindtap="buyNow">
                 立即购买
-             </view>                      
+             </view>
         </view>
     </view>
 </view>
