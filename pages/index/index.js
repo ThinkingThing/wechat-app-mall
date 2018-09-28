@@ -75,7 +75,7 @@ Page({
           })
         } else {
           that.setData({
-            banners: res.data.data
+            banners: res.data.data || ''
           });
         }
       }
