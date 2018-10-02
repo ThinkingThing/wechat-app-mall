@@ -123,6 +123,7 @@ Page({
         pageSize: this.data.pageSize
       },
       success: function(res) {
+        wx.stopPullDownRefresh();
         wx.hideLoading()
         if (res.data.code == 404 || res.data.code == 700){
           let newData = { loadingMoreHidden: false }
