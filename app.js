@@ -124,7 +124,7 @@ App({
     userInfo:null,
     subDomain: "huanjuxianchang", // 如果你的域名是： https://api.it120.cc/abcd 那么这里只要填写 abcd
     version: "4.0.0",
-    shareProfile: '百款精品商品，总有一款适合您' // 首页转发的时候话术
+    shareProfile: '是兄弟,欢聚一堂,齐欢乐,喜聚现场。' // 首页转发的时候话术
   }
   /*
   根据自己需要修改下单时候的模板消息内容设置，可增加关闭订单、收货时候模板消息提醒；
