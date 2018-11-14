@@ -4,6 +4,7 @@ var app = getApp()
 
 Page({
   data: {
+    ajxtrue: false,
     totalScoreToPay: 0,
     goodsList:[],
     isNeedLogistics:0, // 是否需要物流信息
@@ -72,7 +73,17 @@ Page({
     if (e) {
       remark = e.detail.value.remark; // 备注信息
     }
-
+    let ajxtrue = this.data.ajxtrue
+    if (ajxtrue == true) {
+      //表单提交进行
+    } else {
+      wx.showToast({
+        title: '请填写正确手机号码',
+        icon: 'success',
+        duration: 2000
+      })
+      return;
+    }
     var postData = {
       token: loginToken,
       goodsJsonStr: that.data.goodsJsonStr,
@@ -277,5 +288,42 @@ Page({
       youhuijine: this.data.coupons[selIndex].money,
       curCoupon: this.data.coupons[selIndex]
     });
+  },
+   // 手机号验证
+   blurPhone: function (e) {
+      var phone = e.detail.value;
+      let that = this
+      if (!(/^1[34578]\d{9}$/.test(phone))) {
+         this.setData({
+            ajxtrue: false
+         })
+         if (phone.length >= 11) {
+            wx.showToast({
+               title: '手机号有误',
+               icon: 'success',
+               duration: 2000
+            })
+         }
+      } else {
+         this.setData({
+            ajxtrue: true
+         })
+         console.log('验证成功', that.data.ajxtrue)
+      }
+   },
+  // 表单提交
+  formSubmit(e) {
+    let that = this
+    let val = e.detail.value
+    let ajxtrue = this.data.ajxtrue
+    if (ajxtrue == true) {
+      //表单提交进行
+    } else {
+      wx.showToast({
+        title: '手机号有误',
+        icon: 'success',
+        duration: 2000
+      })
+    }
   }
 })
