@@ -101,7 +101,7 @@ Page({
     that.getNotice ();
   },
   onPageScroll(e) {
-    let scrollTop = this.data.scrollTop
+    // let scrollTop = this.data.scrollTop
     this.setData({
       scrollTop: e.scrollTop
     })
