@@ -123,7 +123,9 @@ App({
   globalData:{
     userInfo:null,
     subDomain: "huanjuxianchang", // 如果你的域名是： https://api.it120.cc/abcd 那么这里只要填写 abcd
-    version: "4.0.0",
+    version: "4.1.0",
+    note: '增加小程序购物单支持',
+    appid: "wxa46b09d413fbcaff", // 您的小程序的appid
     shareProfile: '是兄弟,欢聚一堂,齐欢乐,喜聚现场。' // 首页转发的时候话术
   }
   /*
