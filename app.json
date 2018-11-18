@@ -23,7 +23,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "喜聚现场在线",
     "navigationBarTextStyle":"black",
-    "enablePullDownRefresh":true,
     "onReachBottomDistance":50
   },
   "tabBar": {

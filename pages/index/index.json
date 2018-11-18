@@ -1,3 +1,4 @@
 {
-   "navigationBarTitleText":"喜聚现场在线"
+   "navigationBarTitleText":"喜聚现场在线",
+   "enablePullDownRefresh": true
 }
